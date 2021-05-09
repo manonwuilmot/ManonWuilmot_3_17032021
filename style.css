@@ -1,0 +1,269 @@
+.typologo, .footer__logo {
+  font-family: "Shrikhand", cursive;
+}
+
+.typography, .footer__menu li, .restaurant--location, .restaurant--name, .vignette--image__button--new, .usermanual__step--number, .usermanual__step, .button--explore, .title__mainsection, .title__secondarytitle, .title__subtitle, .title__maintitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+}
+
+.typobold {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background: white;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0 0 20px gray;
+}
+.header__logo {
+  width: 40%;
+}
+.header__logo--image {
+  width: 100%;
+}
+
+.location {
+  background-color: #ececec;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.location__icon--map {
+  width: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-size: 1em;
+}
+.location__research {
+  width: 35%;
+  height: 90%;
+  margin-left: 10px;
+  border: none;
+  background-color: #ececec;
+  font-size: 1em;
+}
+
+h1, h2 {
+  width: 80%;
+}
+
+.title__maintitle {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.title__subtitle {
+  font-size: 0.7em;
+  font-weight: 100;
+}
+.title__secondarytitle {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.title__mainsection {
+  font-size: 0.8em;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+.presentation {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  margin-bottom: 50px;
+}
+
+.button--pink {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  background: linear-gradient(to top, #9549d3, #d349b5);
+  box-shadow: 0 0 20px gray;
+  border-radius: 50px;
+  width: 200px;
+}
+.button--explore {
+  font-weight: bold;
+  color: white;
+}
+
+.usermanual {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.usermanual--text {
+  margin-left: 30px;
+}
+.usermanual__step {
+  position: relative;
+  width: 85%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #bdbdbd;
+  font-weight: bold;
+}
+.usermanual__step--number {
+  position: absolute;
+  left: -10px;
+  background-color: #9549d3;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+}
+
+.fas.fa-mobile-alt, .fas.fa-list-ul, .fas.fa-store {
+  font-size: 1.3em;
+  color: gray;
+}
+
+.mainsection {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: whitesmoke;
+}
+.mainsection__vignette {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.vignette--background--white {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: white;
+  width: 90%;
+  height: 260px;
+  box-shadow: 0 0 20px #bdbdbd;
+}
+.vignette--image {
+  width: 100%;
+}
+.vignette--image__button--new {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 20px;
+  right: 20px;
+  background-color: #6ee4ad;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  color: #0c8347;
+}
+.vignette--figcaption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.restaurant--location {
+  font-size: 0.7em;
+  font-weight: 100;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+
+.image__newrestaurant, .image__otherrestaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.far.fa-heart {
+  font-size: 1.7em;
+  color: gray;
+}
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  background-color: #3b3b3b;
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer__logo {
+  color: white;
+}
+
+.footer__menu li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: white;
+}
+
+.fas.fa-hands-helping {
+  margin-right: 10px;
+}
+
+.fas.fa-utensils {
+  margin-right: 17px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+.header {
+  background: gray;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 10px gray;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,282 @@
+$colour-white: white;
+$colour-shadow: gray;
+$colour-darkshadow: rgb(59, 59, 59);
+$color-neutral: rgb(236, 236, 236);
+$color-neutral-lighter: rgb(245, 245, 245);
+$color-trend: rgb(211, 73, 181);
+$color-trend-darker: #9549d3;
+$color-new: #6ee4ad;
+$color-new-darker: #0c8347;
+
+.typologo{
+    font-family: 'Shrikhand', cursive;
+}
+.typography{
+    font-family: 'Roboto', sans-serif;
+    font-size : 0.8em;
+}
+.typobold{
+    font-family: 'Roboto', sans-serif;
+    font-size : 0.8em;
+    font-weight: 300;
+}
+
+@mixin title {
+    @extend .typography;
+    font-size : 0.8em;
+    font-weight: 500;
+
+}
+@mixin subtitle {
+    @extend .typography;
+    font-size : 0.7em;
+    font-weight: 100;
+}
+
+@mixin shadow{
+    box-shadow: 0 0 20px gray;
+}
+@mixin lightshadow{
+    box-shadow: 0 0 20px rgb(189, 189, 189)
+}
+@mixin padding-bloc{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+figure{
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+.header {
+    background: $colour-white;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    @include shadow;
+        &__logo{
+            width: 40%;
+            &--image{
+                width: 100%;}
+        }
+}
+
+.location{
+    background-color: $color-neutral;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &__icon--map{
+        width: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        font-size: 1em;}
+    &__research{
+        width: 35%;
+        height: 90%;
+        margin-left: 10px;
+        border: none;
+        background-color: $color-neutral;
+        font-size: 1em;}
+}
+h1, h2{
+    width: 80%;
+}
+.title{
+    &__maintitle {
+    @include title;}
+    &__subtitle{
+    @include subtitle;}
+    &__secondarytitle{
+    @include title;
+    margin-left: 20px;}
+    &__mainsection{
+    @include title;
+    font-size: 1.2em;
+    margin-left: 20px;
+   }
+}
+
+.presentation{
+   @include padding-bloc;
+    text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   justify-content: center;
+   align-items: center;
+   background: $color-neutral-lighter;
+   margin-bottom: 50px;
+}
+
+.button{
+    &--pink{
+    text-align: center;
+    padding: 20px; margin: 20px;
+    background: linear-gradient(to top, $color-trend-darker, $color-trend);
+    @include shadow;
+    border-radius: 50px;   
+    width : 200px;}
+    &--explore{
+        @extend .typography;
+        font-weight: bold;
+        color: white;}
+}
+
+
+
+.usermanual{
+    @include padding-bloc;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &--text{
+        margin-left: 30px;  
+    }
+    &__step{
+    position: relative;
+    width: 85%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-neutral-lighter;
+    border-radius: 10px;
+    @include lightshadow;
+    @extend .typography;
+    font-weight: bold;
+    &--number{
+        position: absolute;
+        left: -10px; 
+        background-color: $color-trend-darker;
+        @extend .typography;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        padding: 3px;
+     
+    }
+}
+}
+.fas.fa-mobile-alt, .fas.fa-list-ul, .fas.fa-store{
+    font-size: 1.3em;
+    color: $colour-shadow;
+}
+.mainsection{
+    @include padding-bloc;
+    background-color: $color-neutral-lighter;
+    &__vignette{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+}
+.vignette{
+    &--background--white{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: $colour-white;
+    width: 90%;
+    height: 260px;
+    @include lightshadow;}
+    &--image{
+        width: 100%;
+        &__button--new{
+            position: absolute;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            top: 20px; right: 20px;
+            background-color: $color-new;
+            height: 30px; width: 90px;
+            border-radius: 5px;
+            @extend .typography;
+            color: $color-new-darker;
+        }
+    }
+    &--figcaption{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+    }
+}
+.restaurant{
+    &--name{
+    @extend .typography;}
+    &--location{
+    @include subtitle;
+    font-size: 0.8em;
+    margin-top: 10px;
+    }
+    
+}
+.image__newrestaurant, .image__otherrestaurant{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    height: 200px;
+    overflow: hidden;   
+}
+.far.fa-heart{
+    font-size: 1.7em;
+    color: $colour-shadow;
+}
+
+.footer{
+    @include padding-bloc;
+    padding-left: 20px;
+    background-color: $colour-darkshadow;
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: flex-start;
+    &__logo{
+        @extend .typologo;
+        color: white;}
+}
+
+.footer__menu li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @extend .typography;
+    color: white;
+}
+.fas.fa-hands-helping{
+    margin-right: 10px;
+}
+.fas.fa-utensils{
+    margin-right: 17px;
+}
