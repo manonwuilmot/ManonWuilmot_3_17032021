@@ -1,0 +1,24 @@
+.footer{
+    @include padding-bloc;
+    background-color: $colour-darkshadow;
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: flex-start;
+    &__logo{
+        margin-left: 20px;
+        @extend .typologo;
+        color: white;}
+}
+
+.footer__menu li{
+    padding-left: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @extend .typography;
+    color: white;
+}

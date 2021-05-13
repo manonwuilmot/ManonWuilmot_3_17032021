@@ -1,0 +1,22 @@
+@mixin title {
+    @extend .typography;
+    font-size : 0.8em;
+    font-weight: 500;
+
+}
+@mixin subtitle {
+    @extend .typography;
+    font-size : 0.7em;
+    font-weight: 100;
+}
+
+@mixin shadow($colourshadow){
+    box-shadow: 0 0 20px $colourshadow;
+}
+@mixin lightshadow{
+    box-shadow: 0 0 20px rgb(189, 189, 189)
+}
+@mixin padding-bloc{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

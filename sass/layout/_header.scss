@@ -1,0 +1,16 @@
+.header {
+    padding: 10px;
+    background: $colour-white;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    @include shadow($colour-shadow);
+        &__logo{
+            width: 40%;
+            max-width: 200px;
+            &--image{
+                width: 100%;}
+        }
+}

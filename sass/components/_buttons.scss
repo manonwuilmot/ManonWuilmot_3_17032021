@@ -1,0 +1,13 @@
+.button{
+    &--pink{
+    text-align: center;
+    padding: 20px; margin: 20px;
+    background: linear-gradient(to top, $color-trend-darker, $color-trend);
+    @include shadow($colour-shadow);
+    border-radius: 50px;   
+    width : 200px;}
+    &--explore{
+        @extend .typography;
+        font-weight: bold;
+        color: white;}
+}

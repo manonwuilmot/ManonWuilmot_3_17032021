@@ -1,0 +1,46 @@
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.usermanual{
+    @include padding-bloc;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &--text{
+        margin-left: 30px;  
+    }
+    &__step{
+    position: relative;
+    width: 85%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-neutral-lighter;
+    border-radius: 10px;
+    @include lightshadow;
+    @extend .typography;
+    font-weight: bold;
+    &--number{
+        position: absolute;
+        left: -10px; 
+        background-color: $color-trend-darker;
+        @extend .typography;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        padding: 3px;
+     
+    }
+}
+}
