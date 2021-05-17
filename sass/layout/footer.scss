@@ -7,18 +7,55 @@
     flex-direction: column; 
     justify-content: space-between;
     align-items: flex-start;
+    @include desktop-only{
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__logo{
         margin-left: 20px;
         @extend .typologo;
-        color: white;}
-}
-
-.footer__menu li{
+        color: white;
+        @include desktop-only{
+            display: none;
+        }
+    }
+    &__logo2{
+        display: none;
+        @include desktop-only{
+            font-family: Shrikhand;
+            font-size: 1.5rem;
+            color: white;
+            display: flex;
+        }
+    }
+    &__menu {
+    width: 100%;
+    @include desktop-only{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        &--text{
+            &:hover{
+                cursor: pointer;
+                color: $colour-shadow;
+            }  
+        }
+    }
+    & li{
     padding-left: 20px;
-    width: 80%;
+    width: 200px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    @extend .typography;
-    color: white;
+    flex-wrap: nowrap;
+    @include text-bold;
+    color: white; 
+}
+}
 }

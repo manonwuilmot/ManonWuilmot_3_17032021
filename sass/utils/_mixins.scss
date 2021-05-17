@@ -1,13 +1,29 @@
+$font-size: 0.7rem 0.8rem 1rem 1.5rem 2rem 3rem 1.55rem; 
+$font-weight: 100, 200, 300, 500, 700;
+
+
+
 @mixin title {
     @extend .typography;
-    font-size : 0.8em;
-    font-weight: 500;
-
+    font-size : nth($font-size, 4);
+    font-weight: nth($font-weight, 5);
+    width: 250px;
 }
 @mixin subtitle {
     @extend .typography;
-    font-size : 0.7em;
-    font-weight: 100;
+    font-size : nth($font-size, 3);
+    font-weight: nth($font-weight, 1);
+}
+@mixin text-button {
+    @extend .typography;
+    font-size : nth($font-size, 3);
+    font-weight: nth($font-weight, 4);   
+}
+@mixin text-bold {
+    @extend .typography;
+    font-size : nth($font-size, 3);
+    font-weight: nth($font-weight, 4); 
+    font-weight: bold;
 }
 
 @mixin shadow($colourshadow){
@@ -20,3 +36,16 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+@mixin margin-left{
+    margin-left: 20px;
+}
+@mixin margin-right{
+    margin-right: 20px;
+}
+
+@mixin desktop-only {
+    @media screen and(min-width: map-get($breakpoints, desktop)){
+@content;
+    }
+        }
+

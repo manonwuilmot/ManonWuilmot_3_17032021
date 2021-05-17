@@ -1,8 +1,14 @@
 ul{
     list-style: none;
     padding-left: 0;
+    padding-right: 0;
 }
-
+ul.usermanul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .usermanual{
     @include padding-bloc;
     height: 300px;
@@ -10,13 +16,23 @@ ul{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @include desktop-only{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;   
+    }
     &--text{
-        margin-left: 30px;  
+        @include margin-left;  
     }
     &__step{
     position: relative;
     width: 85%;
     height: 60px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,14 +40,24 @@ ul{
     background-color: $color-neutral-lighter;
     border-radius: 10px;
     @include lightshadow;
-    @extend .typography;
-    font-weight: bold;
+    @include text-button;
+    @include desktop-only{
+        width: 40%;
+        @extend .typography;
+        font-size: 1.5em;   
+    }
+    transition: transform 250ms ease-in-out;
+    &:hover{
+        background-color: darken($color-neutral, 10);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
     &--number{
         position: absolute;
         left: -10px; 
-        background-color: $color-trend-darker;
-        @extend .typography;
-        color: white;
+        background-color: $color-trend-darken;
+        @include text-button;
+        color: $colour-white;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -40,6 +66,11 @@ ul{
         width: 15px;
         height: 15px;
         padding: 3px;
+        @include desktop-only{
+            width: 25px; height: 25px;
+            
+            
+        }
      
     }
 }

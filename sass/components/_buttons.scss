@@ -1,13 +1,31 @@
-.button{
-    &--pink{
+.button--pink{
+    position: relative;
+    z-index: 1;
     text-align: center;
     padding: 20px; margin: 20px;
-    background: linear-gradient(to top, $color-trend-darker, $color-trend);
+    background: linear-gradient(to top, $color-trend-darken, $color-trend);
     @include shadow($colour-shadow);
     border-radius: 50px;   
-    width : 200px;}
-    &--explore{
-        @extend .typography;
-        font-weight: bold;
-        color: white;}
+    width : 200px;
+    @include text-button;
+    color: white;
+    &:hover{
+        &::after{
+            opacity: 1;}
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        left:0; right: 0; bottom: 0; right: 0;
+        border-radius: 50px;
+        background: linear-gradient(to top, lighten($color-trend-darken, 7), lighten($color-trend, 7));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        cursor: pointer;
+        @include shadow($colour-darkshadow);
+    
 }
+}
+

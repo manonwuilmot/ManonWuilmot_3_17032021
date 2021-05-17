@@ -7,10 +7,19 @@
     justify-content: center;
     align-items: center;   
     @include shadow($colour-shadow);
+    @include desktop-only{
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 3;
+    }
         &__logo{
             width: 40%;
             max-width: 200px;
             &--image{
                 width: 100%;}
         }
+    &__icon-return{
+        position: absolute;
+        left: 10%;
+    }
 }

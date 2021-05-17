@@ -4,35 +4,48 @@
 .typography{
     font-family: 'Roboto', sans-serif;
 }
-.typobold{
-    font-family: 'Roboto', sans-serif;
-    font-size : 0.8em;
-    font-weight: 300;
+
+
+h1, h2{
+    @include margin-left;
+    @include margin-right; 
 }
 
 
 .title{
     &__maintitle {
-    @include title;}
+    @include title;
+    @include desktop-only{
+        font-size: nth($font-size, 5);
+        width: 700px;
+        margin-top: 30px;
+    }}
     &__subtitle{
-    @include subtitle;}
+    @include subtitle;
+    @include desktop-only{
+        font-size: nth($font-size, 4);
+        width: 700px;
+    }}
     &__secondarytitle{
     @include title;
-    margin-left: 20px;}
+    @include margin-left;
+    @include desktop-only{
+        font-size: nth($font-size, 5);}
+    }
     &__mainsection{
     @include title;
-    font-size: 1.2em;
-    margin-left: 20px;
+    @include margin-left;
+    @include desktop-only{
+        font-size: nth($font-size, 5);}
    }
 }
 
 .restaurant{
     &--name{
-    @extend .typography;}
+    @include text-bold;}
     &--location{
     @include subtitle;
-    font-size: 0.8em;
-    margin-top: 10px;
+    margin-top: 5px;
     }
     
 }
