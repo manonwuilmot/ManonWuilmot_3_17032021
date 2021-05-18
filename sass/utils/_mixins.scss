@@ -49,3 +49,13 @@ $font-weight: 100, 200, 300, 500, 700;
     }
         }
 
+@keyframes slide{
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

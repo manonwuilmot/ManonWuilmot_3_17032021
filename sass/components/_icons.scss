@@ -4,9 +4,27 @@
 }
 
 .icon--heart{
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    margin-bottom: 0px;
+    width: 25px;
+    height: 35px;
+    @include desktop-only{
+        margin-right: 50px;
+    }
+    &:hover .icon--heart--active2{
+        opacity: 1;
+        transform: scale(1.15);
+        
+    }
+    &:hover .icon--heart--active{
+        opacity: 1;
+        transform: scale(1.15);
+    }
     &--inactive{
     position: relative;
-    z-index: 1;
+    z-index: 2;
     font-size: nth($font-size, 4);
     color: $colour-shadow;
     transition: opacity 250ms ease-in-out;}
@@ -15,30 +33,39 @@
 
     }
     &--active{
-            position: absolute;
-            width: 100%;
-            right : 19px;
-            bottom: 34px;
-            width: 25px;
-            height: 25px;
-            z-index: 2;
-            opacity: 0;
-            transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-            font-size: nth($font-size, 4);
-            background: radial-gradient(circle, $color-trend, darken($color-trend-darken, 10));
-            background-clip:text;
-            -webkit-background-clip:text;
-            color:transparent;
-            
-        &:hover{
-            opacity: 1;
-            transform: scale(1.15);
-            
-        }
+        position: relative;
+        top: -30px;
+        width: 25px;
+        height: 35px;
+        z-index: 3;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+        font-size: nth($font-size, 4);
+        background: radial-gradient(circle, $color-trend, darken($color-trend-darken, 10));
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
             
     }
+    &--active2{
+        position: relative;
+        top: -35px;
+        width: 25px;
+        height: 100%;
+        z-index: 3;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+        font-size: nth($font-size, 4);
+        background: radial-gradient(circle, $color-trend, darken($color-trend-darken, 10));
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+        
+}
     
 }
+
+
 
 
 .fas.fa-hands-helping{

@@ -1,4 +1,14 @@
-.typologo, .menu--restaurant--name, .footer__logo {
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.typologo, .menu--restaurant--name, .footer__logo, .letter {
   font-family: "Shrikhand", cursive;
 }
 
@@ -106,9 +116,30 @@ h1, h2 {
   color: gray;
 }
 
+.icon--heart {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  margin-bottom: 0px;
+  width: 25px;
+  height: 35px;
+}
+@media screen and (min-width: 900px) {
+  .icon--heart {
+    margin-right: 50px;
+  }
+}
+.icon--heart:hover .icon--heart--active2 {
+  opacity: 1;
+  transform: scale(1.15);
+}
+.icon--heart:hover .icon--heart--active {
+  opacity: 1;
+  transform: scale(1.15);
+}
 .icon--heart--inactive {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   font-size: 1.5rem;
   color: gray;
   transition: opacity 250ms ease-in-out;
@@ -117,13 +148,11 @@ h1, h2 {
   cursor: pointer;
 }
 .icon--heart--active {
-  position: absolute;
-  width: 100%;
-  right: 19px;
-  bottom: 34px;
+  position: relative;
+  top: -30px;
   width: 25px;
-  height: 25px;
-  z-index: 2;
+  height: 35px;
+  z-index: 3;
   opacity: 0;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   font-size: 1.5rem;
@@ -132,9 +161,19 @@ h1, h2 {
   -webkit-background-clip: text;
   color: transparent;
 }
-.icon--heart--active:hover {
-  opacity: 1;
-  transform: scale(1.15);
+.icon--heart--active2 {
+  position: relative;
+  top: -35px;
+  width: 25px;
+  height: 100%;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  font-size: 1.5rem;
+  background: radial-gradient(circle, #FF79DA, #7c2dbc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .fas.fa-hands-helping {
@@ -274,6 +313,83 @@ ul.usermanul {
   }
 }
 
+.loader {
+  position: absolute;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  animation: fondu 3s ease-in-out;
+  opacity: 0;
+}
+.loader::after {
+  opacity: 1;
+}
+
+.letter {
+  color: whitesmoke;
+  font-size: 3rem;
+  animation: flash 1.2s ease-in-out;
+}
+
+@keyframes flash {
+  0% {
+    color: #FF79DA;
+    opacity: 1;
+  }
+  100% {
+    color: #FF79DA;
+    opacity: 0;
+  }
+}
+.letter:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.letter:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.letter:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.letter:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.letter:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.letter:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.letter:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.letter:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+@keyframes fondu {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body {
   margin: 0;
 }
@@ -459,6 +575,10 @@ figure {
 .footer__menu {
   width: 100%;
 }
+.footer__menu--text:hover {
+  cursor: pointer;
+  color: gray;
+}
 @media screen and (min-width: 900px) {
   .footer__menu {
     display: flex;
@@ -557,7 +677,7 @@ figure {
     font-size: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 }
@@ -584,6 +704,8 @@ li.dish__description {
 }
 
 .dish {
+  transition: 3s;
+  animation: slide 3s;
   width: 90%;
 }
 .dish__description {
@@ -619,6 +741,12 @@ li.dish__description {
 }
 .dish__description:hover .dish__description__price {
   transform: translateX(-80px);
+}
+.dish__description:hover .dish__description--name {
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .dish__description:hover .dish__description--ingredients {
   width: 60%;
