@@ -107,7 +107,7 @@ li.dish__description{
         border-radius: 20px;
         transition: transform 250ms ease-in-out;
         transition-property: all;
-        @include lightshadow;
+        @include shadow(rgb(189, 189, 189));
         @include desktop-only{
             margin-bottom: 20px;   
         }

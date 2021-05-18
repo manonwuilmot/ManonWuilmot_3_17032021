@@ -15,8 +15,7 @@
     }
     &:hover .icon--heart--active2{
         opacity: 1;
-        transform: scale(1.15);
-        
+        transform: scale(1.15);   
     }
     &:hover .icon--heart--active{
         opacity: 1;
@@ -30,7 +29,6 @@
     transition: opacity 250ms ease-in-out;}
     &:hover{
         cursor: pointer; 
-
     }
     &--active{
         position: relative;
@@ -59,18 +57,12 @@
         background: radial-gradient(circle, $color-trend, darken($color-trend-darken, 10));
         background-clip:text;
         -webkit-background-clip:text;
-        color:transparent;
-        
+        color:transparent;       
+}   
 }
-    
-}
-
-
-
 
 .fas.fa-hands-helping{
-    margin-right: 10px;
-    
+    margin-right: 10px;  
 }
 .fas.fa-utensils{
     margin-right: 17px;
