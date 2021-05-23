@@ -92,7 +92,7 @@ body{
 }
 
 .location{
-    margin-top: 100px;
+    margin-top: 10px;
     background-color: $color-neutral;
     height: 60px;
     width: 100%;
@@ -100,6 +100,9 @@ body{
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
+    @include desktop-only{
+        margin-top: 100px;
+    }
     &__icon--map{
         width: 3%;
         display: flex;

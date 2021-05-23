@@ -89,8 +89,6 @@ li.dish__description{
 }
 
 .dish{
-    transition: 3s;
-    animation: slide 3s;
     width: 90%;
     @extend .typography;
     &__description{
@@ -182,6 +180,20 @@ li.dish__description{
     }
 }
 
+
+.starters{
+    animation: slide 3s ease-in-out;  
+    animation-delay: 0s;
+}
+.dishes{
+    animation: slide 3s ease-in-out;  
+    animation-delay: 0.8s;
+}
+
+.sweets{
+    animation: slide 3s ease-in-out;  
+    animation-delay: 1.6s;
+}
 .check{  
     height: 80px; width: 80px;
     &__background{

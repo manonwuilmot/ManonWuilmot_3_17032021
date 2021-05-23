@@ -5,7 +5,7 @@
 
 .icon--heart{
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     right: 20px;
     margin-bottom: 0px;
     width: 25px;
@@ -13,31 +13,36 @@
     @include desktop-only{
         margin-right: 50px;
     }
+    &:hover{
+        cursor: pointer;
+    }
     &:hover .icon--heart--active2{
         opacity: 1;
-        transform: scale(1.15);   
+        transform: scale(1);   
     }
     &:hover .icon--heart--active{
         opacity: 1;
-        transform: scale(1.15);
+        transform: scale(1);}
+    &:hover .icon--heart--inactive{
+        opacity: 0;
     }
     &--inactive{
     position: relative;
-    z-index: 2;
+    z-index: 1;
     font-size: nth($font-size, 4);
     color: $colour-shadow;
-    transition: opacity 250ms ease-in-out;}
-    &:hover{
-        cursor: pointer; 
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
     }
     &--active{
         position: relative;
         top: -30px;
         width: 25px;
         height: 35px;
-        z-index: 3;
+        z-index: 2;
         opacity: 0;
-        transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+        transform: scale(0);
+        transition: opacity 250ms ease-in-out, transform 450ms ease-in-out;
         font-size: nth($font-size, 4);
         background: radial-gradient(circle, $color-trend, darken($color-trend-darken, 10));
         background-clip:text;
@@ -50,9 +55,9 @@
         top: -35px;
         width: 25px;
         height: 100%;
-        z-index: 3;
+        z-index: 2;
         opacity: 0;
-        transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+        transition: opacity 250ms ease-in-out, transform 450ms ease-in-out;
         font-size: nth($font-size, 4);
         background: radial-gradient(circle, $color-trend, darken($color-trend-darken, 10));
         background-clip:text;
