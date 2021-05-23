@@ -410,6 +410,7 @@ ul.usermanul {
   }
 }
 body {
+  overflow-x: hidden;
   margin: 0;
 }
 @media screen and (min-width: 900px) {
