@@ -690,6 +690,8 @@ figure {
   }
 }
 .menu--restaurant--name {
+  margin-top: 20px;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -709,6 +711,7 @@ figure {
 }
 .menu--restaurant--name--title {
   margin-right: 50px;
+  margin-left: 20px;
 }
 
 h3 {
