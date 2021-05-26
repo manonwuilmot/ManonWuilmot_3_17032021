@@ -65,23 +65,9 @@
 }
 }
 
-.footer__menu--text--mail{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    &:hover .email{
-        opacity: 1;
-    }
-    &:hover .submit{
-        opacity: 1;
-        cursor: pointer;
-    }
-}
 .email{
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
-}
-.submit{
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
+    color: white;
+    &:hover{
+        color: gray;
+    }
 }

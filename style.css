@@ -631,27 +631,11 @@ figure {
   color: white;
 }
 
-.footer__menu--text--mail {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-}
-.footer__menu--text--mail:hover .email {
-  opacity: 1;
-}
-.footer__menu--text--mail:hover .submit {
-  opacity: 1;
-  cursor: pointer;
-}
-
 .email {
-  opacity: 0;
-  transition: opacity 250ms ease-in-out;
+  color: white;
 }
-
-.submit {
-  opacity: 0;
-  transition: opacity 250ms ease-in-out;
+.email:hover {
+  color: gray;
 }
 
 .menu__background {
