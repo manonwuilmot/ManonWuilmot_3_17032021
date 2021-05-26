@@ -631,6 +631,29 @@ figure {
   color: white;
 }
 
+.footer__menu--text--mail {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.footer__menu--text--mail:hover .email {
+  opacity: 1;
+}
+.footer__menu--text--mail:hover .submit {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.email {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.submit {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
 .menu__background {
   height: 250px;
   display: flex;
@@ -795,17 +818,15 @@ li.dish__description {
   font-size: 0.8em;
 }
 .dish__description__price {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   position: absolute;
-  z-index: 1;
-  right: 20px;
+  z-index: 3;
+  right: 0;
   height: 100%;
+  width: 40px;
   font-size: 0.8em;
-  margin-left: 10px;
-  padding-bottom: 20px;
   transition: transform 350ms ease-in-out;
 }
 

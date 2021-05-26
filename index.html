@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <title>ohmyfood</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="style.scss"/>
@@ -66,7 +66,7 @@
             </ul>
     
     <section class="mainsection">
-        <h1 class="title__mainsection">Restaurants</h1>
+        <div class="title__mainsection">Restaurants</div>
         <div class="mainsection__vignette">
             <div class="vignette--background--white">
                 <figure class="image__newrestaurant">
@@ -123,7 +123,12 @@
                 <i class="fas fa-hands-helping"></i>
                 <div class="footer__menu--text2">Devenir partenaire</div></li>
             <li class="footer__menu--text">Mentions légales</li>
-            <li class="footer__menu--text">Contact</li>
+            <li class="footer__menu--text">Contact
+                <div class="footer__menu--text--mail">
+                    <input class="email" type="email" name="Contact" placeholder="email@example.fr" />
+                    <input class="submit" type="submit" />
+                </div>
+            </li>
         </ul>
         <div class="footer__logo2">ohmyfood</div>
 
